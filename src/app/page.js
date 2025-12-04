@@ -22,7 +22,9 @@ export default function Home() {
         </div>
 
         <p className="text-[18px] text-[#3BCF41] text-center py-20 font-normal">
-          © {new Date().getFullYear()} calango estamparia. Todos os direitos reservados.
+          © {new Date().getFullYear()} Calango Estamparia e Vestuario Limitada. Todos os direitos reservados.
+          <br />
+            59.965.840.0001/31
         </p>
       </Container>
     </div>
