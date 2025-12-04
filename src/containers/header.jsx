@@ -13,6 +13,7 @@ const Header = () => {
     { name: "NOSSOS PRODUTOS", href: "/#produtos" },
     { name: "PERGUNTAS FREQUENTES", href: "/#faq" },
     { name: "COMO FAZER SEU PEDIDO", href: "/#pedido" },
+    { name: "CATALOGO", href: "/catalogo" },
   ];
 
   const redes = [
@@ -40,9 +41,13 @@ const Header = () => {
       <nav>
         <ul className="flex gap-[20px] text-[16px]">
           {navs.map((nav, index) => (
-            <li key={index} className="cursor-pointer relative transition-all duration-300 
+            <li
+              key={index}
+              className="cursor-pointer relative transition-all duration-300 
                    hover:-translate-y-1 after:content-[''] after:block after:w-0 
-                   after:h-[2px] after:bg-[#3BCF41] after:mt-1 hover:after:w-full after:transition-all after:duration-300" onClick={() => handleScroll(nav.href)}>
+                   after:h-[2px] after:bg-[#3BCF41] after:mt-1 hover:after:w-full after:transition-all after:duration-300"
+              onClick={() => handleScroll(nav.href)}
+            >
               {nav.name}
             </li>
           ))}
@@ -51,7 +56,10 @@ const Header = () => {
 
       <ul className="flex gap-[25px]">
         {redes.map((item, index) => (
-          <li key={index} className="text-[26px] cursor-pointer  hover:-translate-y-1 transition-all duration-300 ">
+          <li
+            key={index}
+            className="text-[26px] cursor-pointer  hover:-translate-y-1 transition-all duration-300 "
+          >
             {item.icon}
           </li>
         ))}

@@ -6,6 +6,16 @@ body {
 
 }
 
+.slick-slide:focus,
+.slick-slide div:focus,
+.slick-slider:focus,
+.slick-list:focus,
+.slick-track:focus {
+  outline: none !important;
+  border: none !important;
+}
 
-
-
+.slick-slide img {
+  outline: none !important;
+  border: none !important;
+}
