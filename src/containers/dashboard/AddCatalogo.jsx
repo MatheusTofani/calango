@@ -21,6 +21,10 @@ export default function AddCatalogo() {
     "Terceirão",
     "Esportivo",
     "Igreja",
+    "Nono Ano",
+    "Faculdade",
+    "Personalizados"
+
   ];
 
   // ============================================================
