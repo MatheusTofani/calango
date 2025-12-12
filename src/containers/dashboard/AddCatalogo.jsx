@@ -12,7 +12,7 @@ export default function AddCatalogo() {
   const fileInput = useRef(null);
 
   const MAX_ITEMS = 120;
-  const MAX_IMAGE_SIZE = 180 * 1024; // 100KB
+  const MAX_IMAGE_SIZE = 180 * 1024;
   const MAX_IMAGES = 3;
 
   const CATEGORY_OPTIONS = [
@@ -24,11 +24,10 @@ export default function AddCatalogo() {
     "Nono Ano",
     "Faculdade",
     "Personalizados"
-
   ];
 
   // ============================================================
-  // Carregar catalogo existente
+  // Carregar catálogo existente
   // ============================================================
   useEffect(() => {
     async function load() {
@@ -67,7 +66,7 @@ export default function AddCatalogo() {
     setItems((prev) => [
       ...prev,
       {
-        id: null,
+        id: "",
         name: "",
         category: "",
         existing: false,
@@ -96,7 +95,7 @@ export default function AddCatalogo() {
     if (!file) return;
 
     if (file.size > MAX_IMAGE_SIZE) {
-      alert("A imagem deve ter no máximo 100KB.");
+      alert("A imagem deve ter no máximo 180KB.");
       return;
     }
 
@@ -111,13 +110,15 @@ export default function AddCatalogo() {
   async function removeImage(imgIndex) {
     const item = items[modalIndex];
 
-    if (!item.id) {
+    // Item novo
+    if (!item.existing || !item.id) {
       const updated = [...items];
       updated[modalIndex].images[imgIndex] = null;
       setItems(updated);
       return;
     }
 
+    // Item existente
     await supabase.storage
       .from("catalog-images")
       .remove([`${item.id}/${imgIndex + 1}.jpg`]);
@@ -132,7 +133,7 @@ export default function AddCatalogo() {
   }
 
   // ============================================================
-  // Salvar item
+  // Salvar item (ACEITA ID MANUAL)
   // ============================================================
   async function saveItem() {
     if (isSaving) return;
@@ -147,14 +148,20 @@ export default function AddCatalogo() {
       return;
     }
 
-    let id = item.id;
+    let id = item.id ? item.id.trim() : null;
 
     try {
-      // Criar novo item
+      // Criar novo item (ou com ID manual)
       if (!item.existing) {
         const { data, error } = await supabase
           .from("catalog")
-          .insert([{ name: item.name, category: item.category }])
+          .insert([
+            {
+              id: id || undefined, // se estiver vazio, supabase gera automático
+              name: item.name,
+              category: item.category,
+            },
+          ])
           .select()
           .single();
 
@@ -271,11 +278,17 @@ export default function AddCatalogo() {
           <div className="bg-white p-6 rounded-xl w-[400px] space-y-4 shadow-xl">
             <h2 className="text-lg font-bold">Editar Item</h2>
 
+            {/* ID EDITÁVEL */}
             <input
-              className="w-full border p-2 rounded bg-gray-100"
+              className="w-full border p-2 rounded"
               value={items[modalIndex].id ?? ""}
-              readOnly
-              placeholder="ID será gerado"
+              onChange={(e) => {
+                const updated = [...items];
+                updated[modalIndex].id = e.target.value;
+                updated[modalIndex].existing = false; 
+                setItems(updated);
+              }}
+              placeholder="ID (opcional)"
             />
 
             <input
@@ -367,7 +380,7 @@ export default function AddCatalogo() {
                   Fechar
                 </button>
 
-                  <button
+                <button
                   onClick={saveItem}
                   disabled={isSaving}
                   className={`px-4 py-2 rounded text-white ${
