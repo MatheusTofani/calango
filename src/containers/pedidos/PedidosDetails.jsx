@@ -7,7 +7,7 @@ const PedidosDetails = () => {
         <>
           {" "}
           Envie para a gente: <br />
-          <br className="hidden md:block" /> produto, cor do tecido, estampas, quantidade e CEP.{" "}
+          <br className="hidden md:block" />Quantidade de peças, produto que deseja fazer e sua inspiração de estampa.{" "}
         </>
       ),
     },
@@ -17,8 +17,8 @@ const PedidosDetails = () => {
       desc: (
         <>
           {" "}
-          Orçamento aprovado, hora de começar a criar! <br />
-          <br  className="hidden md:block" /> É só preencher o briefing para dar início ao processo criativo.{" "}
+         Orçamento aprovado, vamos criar a sua arte! <br />
+          <br  className="hidden md:block" />  Nos mande suas inspirações para a estampa e deixe nosso time fazer o resto.{" "}
         </>
       ),
     },
@@ -35,7 +35,7 @@ const PedidosDetails = () => {
     {
       id: 5,
       nome: "ENTREGA",
-      desc: "Confira o endereço, acerte o saldo (se houver) e o pedido será enviado!",
+      desc: "Confirme os dados de envio, acerte o restante do valor (se houver) e o pedido será enviado!",
     },
   ];
 

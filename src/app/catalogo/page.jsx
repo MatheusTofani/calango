@@ -1,6 +1,7 @@
 import Container from "@/components/container";
 import CatalogoHeader from "@/containers/catalogo/CatalogoHeader";
 import Header from "@/containers/header";
+import Whatsapp from "@/containers/whatsapp";
 
 const catalogo = () => {
   return (
@@ -9,7 +10,8 @@ const catalogo = () => {
       <div className=" pt-10 md:pt-20 bg-[#3BCF41] rounded-[20px] md:rounded-[70px]">
         <CatalogoHeader />
       </div>
-      <p className="text-[18px] text-[#3BCF41] text-center py-20 font-normal">
+      <Whatsapp />
+      <p className="md:text-[18px] text-[12px] text-[#3BCF41] text-center py-20 font-normal">
         © {new Date().getFullYear()} Calango Estamparia e Vestuario Limitada.
         Todos os direitos reservados.
         <br />

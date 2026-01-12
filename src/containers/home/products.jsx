@@ -27,12 +27,12 @@ export const items = [
       {
         question: "Composição",
         answer:
-          "Nossos moletons são feitos de algodão premium, proporcionando conforto e durabilidade.",
+          "Nossos moletons são 3 cabos (PREMIUM) 50% Algodão e 50% Poliéster, bem robusto proporcionando conforto e durabilidade.",
       },
       {
         question: "Tamanhos",
         answer:
-          "Oferecemos tamanhos que vão do P ao GG para atender a todas as necessidades.",
+          "PP ao XGG",
       },
       {
         question: "Cuidados",
@@ -67,12 +67,12 @@ export const items = [
       {
         question: "Composição",
         answer:
-          "Nossos moletons são feitos de algodão premium, proporcionando conforto e durabilidade.",
+          "Trabalhamos com diversos tecidos (PREMIUM) em nossas camisas sendo eles: 100% algodão, PV, DryFit e Piquet que são os mais tradicionais. Consulte nosso time de atendimento para que possamos te ajudar com a melhor escolha para o seu segmento.",
       },
       {
         question: "Tamanhos",
         answer:
-          "Oferecemos tamanhos que vão do P ao GG para atender a todas as necessidades.",
+          "Oferecemos tamanhos BabyLook PP ao BabyLook GG e do PP tradicional ao XGG para atender a todas as necessidades.",
       },
       {
         question: "Cuidados",
@@ -84,6 +84,7 @@ export const items = [
   {
     name: "canecas",
     pb: "/images/canecas/pb.jpg",
+     download: "/",
     images: [
       {
         image: "/images/canecas/caneca1.jpg",
@@ -102,21 +103,21 @@ export const items = [
       },
     ],
     href: "",
-    faq: [
+   faq: [
       {
         question: "Composição",
         answer:
-          "Nossos moletons são feitos de algodão premium, proporcionando conforto e durabilidade.",
+          "Nossas canecas são feitas de 100% alumínio, com tirante incluso.",
       },
       {
         question: "Tamanhos",
         answer:
-          "Oferecemos tamanhos que vão do P ao GG para atender a todas as necessidades.",
+          "Oferecemos as opções de 550ml e 850ml.",
       },
       {
         question: "Cuidados",
         answer:
-          "Recomendamos lavar à máquina em água fria e secar à sombra para manter a qualidade do tecido.",
+          "Não use no Micro-ondas e máquina de lava-louças, pois o calor excessivo danificar a estampa.",
       },
     ],
   },

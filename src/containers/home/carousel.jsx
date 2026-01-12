@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { createClient } from "@supabase/supabase-js";
 import PageLoader from "@/components/pageLoader";
 
 const Carousel = () => {
@@ -12,37 +11,16 @@ const Carousel = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const loadImages = async () => {
-      const supabase = createClient(
-        process.env.NEXT_PUBLIC_SUPABASE_URL,
-        process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
-      );
+    const slots = [
+      { image: "https://eysredkdkvymsfheinpv.supabase.co/storage/v1/object/public/carousel/slot1.jpg" },
+      { image: "https://eysredkdkvymsfheinpv.supabase.co/storage/v1/object/public/carousel/slot2.jpg" },
+      { image: "https://eysredkdkvymsfheinpv.supabase.co/storage/v1/object/public/carousel/slot3.jpg" },
+      { image: "https://eysredkdkvymsfheinpv.supabase.co/storage/v1/object/public/carousel/slot4.jpg" },
+      { image: "https://eysredkdkvymsfheinpv.supabase.co/storage/v1/object/public/carousel/slot5.jpg" },
+    ];
 
-      const { data, error } = await supabase.storage
-        .from("carousel")
-        .list("", { limit: 100 });
-
-      if (error) {
-        console.error("Erro ao listar imagens:", error);
-        setLoading(false);
-        return;
-      }
-
-      const base =
-        process.env.NEXT_PUBLIC_SUPABASE_URL +
-        "/storage/v1/object/public/carousel/";
-
-      const updated = data
-        .filter((file) => /\.(jpg|jpeg|png|webp)$/i.test(file.name))
-        .map((file) => ({
-          image: `${base}${file.name}?v=${new Date(file.updated_at).getTime()}`,
-        }));
-
-      setImages(updated);
-      setLoading(false);
-    };
-
-    loadImages();
+    setImages(slots);
+    setLoading(false);
   }, []);
 
   const settings = {
@@ -59,9 +37,7 @@ const Carousel = () => {
   return (
     <div className="px-2 md:px-[65px] relative">
       {/* LOADING */}
-      {loading && (
-        <PageLoader />
-      )}
+      {loading && <PageLoader />}
 
       <div className="flex items-center justify-center h-[45px] absolute md:h-[100px]">
         <img className="md:h-auto h-[30px]" src="/assets/icon.png" />
@@ -90,7 +66,7 @@ const Carousel = () => {
               <div key={index}>
                 <img
                   src={item.image}
-                  alt="banner"
+                  alt={`banner-${index}`}
                   className="w-full h-[212px] md:h-[528px] object-cover"
                   style={{
                     WebkitMaskImage: "url(/assets/retangulo.png)",

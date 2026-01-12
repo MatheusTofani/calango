@@ -61,7 +61,7 @@ const Faq = () => {
 
               <div
                 className={`overflow-hidden transition-all duration-500 ease-in-out ${
-                  open === index ? "max-h-40 mt-4" : "max-h-0"
+                  open === index ? "max-h-96 mt-4" : "max-h-0"
                 }`}
               >
                 <p className="font-normal text-[13px] md:text-[18px] lg:text-[20px] border-b border-[#1F9223] pb-6 md:pb-10">

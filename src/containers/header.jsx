@@ -30,29 +30,27 @@ const Header = () => {
   ];
 
   const isActive = (href) => {
-    // IGNORA links com hash (#)
     if (href.includes("#")) return false;
-
     return pathname === href;
   };
 
   return (
     <header className="w-full py-5 px-4 md:px-[50px] text-[#3BCF41]">
       <div className="min-h-[100px] flex items-center justify-between relative">
-        {/* MENU HAMBURGUER */}
         <button
           className="md:hidden text-2xl z-60"
           onClick={() => setOpen(!open)}
         >
           {open ? <FaTimes /> : <FaBars />}
         </button>
+        <a href="/">
+          <img
+            className="h-12 md:h-20 absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0 z-50"
+            src="/logo.png"
+            alt="Logo"
+          />
+        </a>
 
-        {/* LOGO */}
-        <img
-          className="h-12 md:h-20 absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0 z-50"
-          src="/logo.png"
-          alt="Logo"
-        />
 
         {/* NAV DESKTOP */}
         <nav className="hidden md:block">
@@ -93,21 +91,18 @@ const Header = () => {
 
       {/* MENU MOBILE */}
       <div
-        className={`md:hidden fixed inset-0 z-40 transition-all duration-500 ${
-          open ? "visible" : "invisible pointer-events-none"
-        }`}
+        className={`md:hidden fixed inset-0 z-40 transition-all duration-500 ${open ? "visible" : "invisible pointer-events-none"
+          }`}
       >
         <div
-          className={`absolute inset-0 bg-black transition-opacity duration-500 ${
-            open ? "opacity-50" : "opacity-0"
-          }`}
+          className={`absolute inset-0 bg-black transition-opacity duration-500 ${open ? "opacity-50" : "opacity-0"
+            }`}
           onClick={() => setOpen(false)}
         />
 
         <nav
-          className={`absolute top-0 left-0 w-full bg-[#131413] shadow-lg transition-transform duration-500 ${
-            open ? "translate-y-0" : "-translate-y-full"
-          }`}
+          className={`absolute top-0 left-0 w-full bg-[#131413] shadow-lg transition-transform duration-500 ${open ? "translate-y-0" : "-translate-y-full"
+            }`}
         >
           <div className="pt-24 pb-8 px-4">
             <ul className="flex flex-col items-center gap-4">
@@ -121,10 +116,9 @@ const Header = () => {
                       onClick={() => setOpen(false)}
                       className={`block text-center py-4 px-6 text-lg font-medium rounded-lg 
                         transition-all duration-300
-                        ${
-                          active
-                            ? "text-white bg-gray-800/70"
-                            : "hover:bg-gray-800/50 hover:text-[#3BCF41]"
+                        ${active
+                          ? "text-white bg-gray-800/70"
+                          : "hover:bg-gray-800/50 hover:text-[#3BCF41]"
                         }`}
                     >
                       {nav.name}

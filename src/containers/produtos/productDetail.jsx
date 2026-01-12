@@ -10,7 +10,6 @@ const ProductDetail = ({ products }) => {
 
   const [open, setOpen] = useState(null);
 
-  // ignora a imagem 0 (capa)
   const galleryImages = products.images.slice(1);
   const [imageSelect, setImageSelect] = useState(0);
 
@@ -28,8 +27,7 @@ const ProductDetail = ({ products }) => {
 
   return (
     <div>
-      {/* TÍTULO */}
-      <div className="flex items-center justify-between gap-[54px] px-[20px] md:px-[65px] pb-[30px]">
+      <div className="flex items-center justify-between gap-[54px] px-[20px] md:px-[105px] pb-[30px]">
         <div className="md:hidden flex-1 h-px bg-black"></div>
         <p className="text-[18px] md:text-[24px] md:w-[150px] font-bold">
           {products.name.toUpperCase()}
@@ -38,15 +36,13 @@ const ProductDetail = ({ products }) => {
       </div>
 
       <div className="bg-[#D9D9D9] pt-[60px] md:pt-[80px] pb-[120px] md:pb-[180px] relative">
-        <div className="px-[40px] md:px-[65px] flex flex-col-reverse md:flex-row md:justify-between items-center md:items-start gap-16 md:gap-0">
-
-          {/* FAQ */}
+        <div className="px-[40px] md:px-[105px] flex flex-col-reverse md:flex-row md:justify-between items-center md:items-start gap-16 md:gap-0">
           <ul className="w-full md:w-[500px] mt-[400px] md:mt-0">
             {products.faq.map((item, index) => (
               <li
                 key={index}
                 className={`
-                  ${!products.download ? "md:pb-10" : "md:pb-0"}
+                  ${!products.download ? "md:pb-8" : "md:pb-3"}
                   my-3 md:my-7
                   cursor-pointer
                   bg-[#131413]
@@ -67,9 +63,8 @@ const ProductDetail = ({ products }) => {
                 </p>
 
                 <div
-                  className={`overflow-hidden transition-all duration-500 ${
-                    open === index ? "max-h-40 mt-4" : "max-h-0"
-                  }`}
+                  className={`overflow-hidden transition-all duration-500 ${open === index ? "max-h-40 mt-4" : "max-h-0"
+                    }`}
                 >
                   <p className="text-[15px] md:text-[18px] text-start p-4">
                     {item.answer}
@@ -86,17 +81,20 @@ const ProductDetail = ({ products }) => {
             </li>
 
             {/* DOWNLOAD TABELA DE MEDIDAS (SÓ SE EXISTIR) */}
-            {products.download && (
-              <li className="w-full text-center mt-5">
+
+            <li className="w-full text-center mt-5">
+              {products.download && (
                 <a
                   href={products.download}
-                  download
+
                   className="underline text-[12px] md:text-[20px]"
                 >
                   Baixar tabela de medidas
                 </a>
-              </li>
-            )}
+              )
+              }
+            </li>
+
           </ul>
 
           {/* IMAGENS */}
@@ -107,7 +105,7 @@ const ProductDetail = ({ products }) => {
               px-[40px]
               top-[-20px]
               md:top-[-80px]
-              md:right-[125px]
+              md:right-[65px]
             "
           >
             {/* Imagem principal */}
