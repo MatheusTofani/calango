@@ -29,7 +29,7 @@ const ProductDetail = ({ products }) => {
     <div>
       <div className="flex items-center justify-between gap-[54px] px-[20px] md:px-[105px] pb-[30px]">
         <div className="md:hidden flex-1 h-px bg-black"></div>
-        <p className="text-[18px] md:text-[24px] md:w-[150px] font-bold">
+        <p className="text-[22px] md:text-[28px] md:w-[150px] font-bold">
           {products.name.toUpperCase()}
         </p>
         <div className="flex-1 md:w-[600px] md:mr-[100px] h-px bg-black"></div>
@@ -76,7 +76,9 @@ const ProductDetail = ({ products }) => {
             {/* BOTÃO ORÇAMENTO */}
             <li className="mt-12">
               <button className="text-[18px] md:text-[24px] font-semibold text-[#131413] bg-[#3BCF41] rounded-[30px] md:rounded-[40px] p-3 w-full">
+               <a href="https://api.whatsapp.com/send/?phone=5577988740276&text&type=phone_number&app_absent=0">
                 Faça seu orçamento!
+                </a>
               </button>
             </li>
 

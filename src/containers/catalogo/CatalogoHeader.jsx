@@ -11,7 +11,7 @@ import { IoSchool } from "react-icons/io5";
 import { MdSportsHandball } from "react-icons/md";
 import { FaCross, FaBoxOpen, FaPencilAlt } from "react-icons/fa";
 import { LuNotebookText } from "react-icons/lu";
-import { LiaUniversitySolid } from "react-icons/lia";
+import { LiaDumbbellSolid, LiaUniversitySolid } from "react-icons/lia";
 
 /* Slick */
 import "slick-carousel/slick/slick.css";
@@ -27,6 +27,7 @@ const categorias = [
   { nome: "Igreja", icon: <FaCross /> },
   { nome: "Nono Ano", icon: <LuNotebookText /> },
   { nome: "Faculdade", icon: <LiaUniversitySolid /> },
+  { nome: "Academia", icon: <LiaDumbbellSolid />  },
   { nome: "Personalizados", icon: <FaPencilAlt /> },
 ];
 

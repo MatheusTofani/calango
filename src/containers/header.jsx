@@ -20,12 +20,12 @@ const Header = () => {
     { name: "NOSSOS PRODUTOS", href: "/#produtos" },
     { name: "PERGUNTAS FREQUENTES", href: "/#faq" },
     { name: "COMO FAZER SEU PEDIDO", href: "/como-fazer-pedido" },
-    { name: "CATALOGO", href: "/catalogo" },
+    { name: "CATÁLOGO", href: "/catalogo" },
   ];
 
   const redes = [
     { icon: <FaInstagram />, href: "https://www.instagram.com/calangoestamparia.ofc/" },
-    { icon: <FaPinterest />, href: "" },
+    { icon: <FaPinterest />, href: "https://br.pinterest.com/calangoestamparia/" },
     { icon: <FaTiktok />, href: "https://www.tiktok.com/@calangoestamparia.ofc" },
   ];
 

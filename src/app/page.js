@@ -16,14 +16,14 @@ export default function Home() {
         <Header />
         <div className=" pt-10 md:pt-20 bg-[#3BCF41] md:rounded-[70px] rounded-[20px]">
           <Carousel />
-<div className="relative z-[5] mt-20 sm:mt-28 md:mt-36 w-full text-center px-4 sm:px-0">
-  <a
-  href="https://api.whatsapp.com/send/?phone=5577988740276&text&type=phone_number&app_absent=0"
-  target="_blank"
-    className="
-      my-3 md:my-7
-      w-full md:w-auto
-      cursor-pointer
+          <div className="relative z-[5] mt-20 sm:mt-28 md:mt-36 w-full px-4 sm:px-0 flex flex-col md:flex-row items-center justify-center gap-4 md:gap-10">
+            <div className="relative z-[5] mt-20  md:mt-15 w-full px-4 flex flex-col md:flex-row items-center justify-center gap-4 md:gap-10">
+              <a
+                href="https://api.whatsapp.com/send/?phone=5577988740276&text&type=phone_number&app_absent=0"
+                target="_blank"
+                className="
+      w-full sm:w-[320px] md:w-auto
+      text-center
       bg-[#131413]
       text-[#3BCF41]
       rounded-[24px] sm:rounded-[30px] md:rounded-[40px]
@@ -34,10 +34,34 @@ export default function Home() {
       transition
       hover:scale-105
     "
-  >
-    Faça seu orçamento!
-  </a>
-</div>
+              >
+                Faça seu orçamento!
+              </a>
+
+              <a
+                href="/catalogo"
+                target="_blank"
+                className="
+      w-full sm:w-[320px] md:w-auto
+      text-center
+      bg-[#D9D9D9]
+      text-[#131413]
+      rounded-[24px] sm:rounded-[30px] md:rounded-[40px]
+      px-6 sm:px-10 md:px-16
+      py-4 sm:py-5
+      text-base sm:text-lg md:text-xl
+      font-bold
+      transition
+      hover:scale-105
+    "
+              >
+                Ver catálogo
+              </a>
+            </div>
+
+          </div>
+
+
 
           <Desc />
           <ProductsHome />
@@ -46,12 +70,12 @@ export default function Home() {
           <Faq />
         </div>
 
-           <p className="md:text-[18px] text-[12px] text-[#3BCF41] text-center py-20 font-normal">
-        © {new Date().getFullYear()} Calango Estamparia e Vestuario Limitada.
-        Todos os direitos reservados.
-        <br />
-        59.965.840.0001/31
-      </p>
+        <p className="md:text-[18px] text-[12px] text-[#3BCF41] text-center py-20 font-normal">
+          © {new Date().getFullYear()} Calango Estamparia e Vestuario Limitada.
+          Todos os direitos reservados.
+          <br />
+          59.965.840.0001/31
+        </p>
       </Container>
 
       <Whatsapp />

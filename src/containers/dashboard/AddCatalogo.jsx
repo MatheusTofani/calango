@@ -23,6 +23,7 @@ export default function AddCatalogo() {
     "Igreja",
     "Nono Ano",
     "Faculdade",
+    "Academia",
     "Personalizados"
   ];
 
