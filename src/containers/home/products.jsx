@@ -84,7 +84,7 @@ export const items = [
   {
     name: "canecas",
     pb: "/images/canecas/pb.jpg",
-     download: "/",
+     
     images: [
       {
         image: "/images/canecas/caneca1.jpg",

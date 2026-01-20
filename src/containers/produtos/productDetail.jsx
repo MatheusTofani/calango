@@ -42,7 +42,7 @@ const ProductDetail = ({ products }) => {
               <li
                 key={index}
                 className={`
-                  ${!products.download ? "md:pb-8" : "md:pb-3"}
+                 
                   my-3 md:my-7
                   cursor-pointer
                   bg-[#131413]
@@ -63,7 +63,7 @@ const ProductDetail = ({ products }) => {
                 </p>
 
                 <div
-                  className={`overflow-hidden transition-all duration-500 ${open === index ? "max-h-40 mt-4" : "max-h-0"
+                  className={`overflow-hidden transition-all duration-500 ${open === index ? "max-h-[1000px] mt-4" : "max-h-0"
                     }`}
                 >
                   <p className="text-[15px] md:text-[18px] text-start p-4">
