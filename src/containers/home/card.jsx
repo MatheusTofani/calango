@@ -39,10 +39,10 @@ const Card = () => {
       {/* layout original preservado */}
       <ul className="flex flex-col md:flex-row justify-between items-center gap-y-[15px] flex-wrap md:gap-y-[50px]">
         <li className="w-full md:w-[340px] lg:w-[370px] md:p-[16px] md:p-[18px] lg:p-[20px] mb-[20px] rounded-[10px]">
-          <h2 className="text-[15px] md:text-[25px] lg:text-[28px] font-bold mb-[10px] bounded">
+          <h2 className="text-[17px] md:text-[25px] lg:text-[28px] font-bold mb-[10px] bounded">
             PORQUE ESCOLHER A CALANGO?
           </h2>
-          <p className="text-[13px] md:text-[18px] lg:text-[20px]">
+          <p className="text-[15px] md:text-[18px] lg:text-[20px]">
             05 motivos pelos quais valem a pena confiar em nós:
           </p>
         </li>
@@ -52,15 +52,15 @@ const Card = () => {
             key={item.id}
             className="w-full md:w-[340px] lg:w-[370px] h-auto md:h-[225px] lg:h-[240px] p-[16px] md:p-[18px] lg:p-5 rounded-[12px] md:rounded-[32px] lg:rounded-[40px] md:border-2 border-[0.5px] border-[#000000] hover:bg-[#131413] hover:text-[#3BCF41] transition-all duration-300"
           >
-            <p className="bounded pb-2 text-[8px] md:text-[16px] lg:text-[18px] font-regular">
+            <p className="bounded pb-2 text-[10px] md:text-[16px] lg:text-[18px] font-regular">
               {item.id}
             </p>
 
-            <h2 className="text-[13px] md:text-[20px] lg:text-[22px] font-bold mb-[10px]">
+            <h2 className="text-[15px] md:text-[20px] lg:text-[22px] font-bold mb-[10px]">
               {item.title}
             </h2>
 
-            <p className="text-[13px] md:text-[17px] lg:text-[18px]">
+            <p className="text-[15px] md:text-[17px] lg:text-[18px]">
               {item.description}
             </p>
           </li>

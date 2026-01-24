@@ -124,14 +124,14 @@ const Rating = () => {
 
               <div className="gap-2 flex flex-col w-full text-[16px] md:text-[18px] lg:text-[20px] bg-[#D9D9D9] p-5 md:p-6 lg:p-7 rounded-[30px] lg:rounded-[40px] relative">
                 <i>
-                  <span className="font-bold text-[13px] md:text-[20px]">{rating.name}</span>{" "}
+                  <span className="font-bold text-[15px] md:text-[20px]">{rating.name}</span>{" "}
                   –{" "}
-                  <span className="font-extralight text-[13px] md:text-[20px]">
+                  <span className="font-extralight text-[15px] md:text-[20px]">
                     {rating.city}
                   </span>
                 </i>
 
-                <p className="text-[13px] md:text-[20px] font-light">"{rating.comment}"</p>
+                <p className="text-[15px] md:text-[20px] font-light">"{rating.comment}"</p>
 
                 <img
                   src={rating.emoji}

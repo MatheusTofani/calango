@@ -19,20 +19,22 @@ const ProductFooter = () => {
 
       {/* Título */}
       <div className="flex items-center gap-[20px] md:gap-[54px] pb-[30px]">
-        <p className="text-[12px] md:text-[24px] md:w-[280px] font-regular">
+        <p className="text-[16px] md:text-[24px] md:w-[280px] w-[150px]  font-regular">
           Outros produtos
         </p>
         <div className="flex-1 h-px bg-black"></div>
       </div>
 
       {/* Lista */}
- <ul className="flex  flex-col md:flex-row gap-8  md:px-0 px-10 md:justify-between">
+ <ul className="flex   flex-col md:flex-row gap-8  md:px-0 px-10 md:justify-between">
   {items.map((products, index) => (
     <li
       key={index}
       className={`
-        w-[210px] md:w-[380px]
-        border-[2px]
+        w-[210px] md:mx-0 md:w-[380px]
+        mx-auto
+        md:border-[6px]
+        border-[4px]
         rounded-[32px] md:rounded-[40px]
         ${
           products.name === currentProductName
@@ -45,16 +47,16 @@ const ProductFooter = () => {
 
         {/* IMAGEM */}
         <div className="w-[200px] h-[200px] md:w-full md:h-[350px] mx-auto relative">
-          <div className="bg-[#3bcf4088] absolute inset-0 rounded-[32px] md:rounded-[40px]"></div>
+          <div className="bg-[#3bcf4088] absolute inset-0 rounded-[28px] md:rounded-[35px]"></div>
           <img
-            className="w-full h-full rounded-[32px] md:rounded-[40px] object-cover"
+            className="w-full h-full rounded-[28px] md:rounded-[35px] object-cover"
             src={products.pb}
             alt=""
           />
         </div>
 
         {/* NOME */}
-        <div className="py-3 md:py-5 rounded-b-[32px] md:rounded-b-[40px] text-center font-bold text-[15px] md:text-[20px]">
+        <div className="py-3 md:py-5 rounded-b-[32px] md:rounded-b-[40px] text-center font-bold text-[15px] md:text-[22px]">
           {products.name.toUpperCase()}
         </div>
 

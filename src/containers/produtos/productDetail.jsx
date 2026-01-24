@@ -35,14 +35,13 @@ const ProductDetail = ({ products }) => {
         <div className="flex-1 md:w-[600px] md:mr-[100px] h-px bg-black"></div>
       </div>
 
-      <div className="bg-[#D9D9D9] pt-[60px] md:pt-[80px] pb-[120px] md:pb-[180px] relative">
+      <div className={`bg-[#D9D9D9] pt-[60px] md:pt-[80px] pb-[10px] md:pb-[180px] relative ${products.download ? 'md:pb-[180px] pb-[100px]' : ''} `}>
         <div className="px-[40px] md:px-[105px] flex flex-col-reverse md:flex-row md:justify-between items-center md:items-start gap-16 md:gap-0">
           <ul className="w-full md:w-[500px] mt-[400px] md:mt-0">
             {products.faq.map((item, index) => (
               <li
                 key={index}
-                className={`
-                 
+                className={`  
                   my-3 md:my-7
                   cursor-pointer
                   bg-[#131413]
@@ -55,7 +54,7 @@ const ProductDetail = ({ products }) => {
                 }
                 onClick={() => setOpen(open === index ? null : index)}
               >
-                <p className="text-[15px] md:text-[24px] font-semibold">
+                <p className="text-[17px] md:text-[24px] font-semibold">
                   <span className="font-bold absolute left-5">
                     {open === index ? "-" : "+"}
                   </span>
@@ -74,7 +73,7 @@ const ProductDetail = ({ products }) => {
             ))}
 
             {/* BOTÃO ORÇAMENTO */}
-            <li className="mt-12">
+            <li className="md:mt-12 mt-10">
               <button className="text-[18px] md:text-[24px] font-semibold text-[#131413] bg-[#3BCF41] rounded-[30px] md:rounded-[40px] p-3 w-full">
                <a href="https://api.whatsapp.com/send/?phone=5577988740276&text&type=phone_number&app_absent=0">
                 Faça seu orçamento!
@@ -85,16 +84,19 @@ const ProductDetail = ({ products }) => {
             {/* DOWNLOAD TABELA DE MEDIDAS (SÓ SE EXISTIR) */}
 
             <li className="w-full text-center mt-5">
-              {products.download && (
+              {products.download ? (
                 <a
                   href={products.download}
 
-                  className="underline text-[12px] md:text-[20px]"
+                  className="underline text-[16px] md:text-[20px]"
                 >
                   Baixar tabela de medidas
                 </a>
-              )
-              }
+              ) : (
+              <div className="h-[20px]"> 
+
+              </div>
+              )}
             </li>
 
           </ul>
@@ -138,12 +140,12 @@ const ProductDetail = ({ products }) => {
                   hover:scale-105
                 "
                 src={galleryImages[imageSelect].image}
-                alt={products.name}
+                alt={products.name}   
               />
             </div>
 
             {/* Miniaturas */}
-            <ul className="w-full flex gap-4 md:gap-5 mt-4 md:mt-5 justify-center md:justify-start">
+            <ul className={` w-[260px] md:mx-0 md:w-full mx-auto flex gap-4 md:gap-5 mt-4 md:mt-5 justify-center md:justify-start `}>
               {galleryImages.map((img, idx) => (
                 <li
                   key={idx}

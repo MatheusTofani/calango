@@ -43,7 +43,7 @@ const Header = () => {
         >
           {open ? <FaTimes /> : <FaBars />}
         </button>
-        <a href="/">
+        <a className="h-full md:h-auto md:w-auto md:block w-full flex items-center justify-center" href="/">
           <img
             className="h-12 md:h-20 absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0 z-50"
             src="/logo.png"

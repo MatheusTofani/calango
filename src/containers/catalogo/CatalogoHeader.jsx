@@ -88,7 +88,6 @@ export default function CatalogoSection() {
     load();
   }, []);
 
-  /* 🔥 TIKTOK PIXEL — VIEW CONTENT AO ABRIR MODAL */
   useEffect(() => {
     if (!modalItem) return;
 
@@ -114,7 +113,7 @@ export default function CatalogoSection() {
     <section className="md:px-[65px] pb-20">
       {/* HEADER */}
       <div className="flex w-full items-center justify-between">
-        <h1 className="text-2xl font-bold px-4 md:px-0">Catalogo</h1>
+        <h1 className="text-2xl font-bold px-4 md:px-0">Catálogo</h1>
         <span className="w-[80%] mx-4 bg-[#131413] h-[2px]"></span>
       </div>
 
@@ -207,7 +206,7 @@ export default function CatalogoSection() {
               <div className="w-full lg:w-[520px]">
                 <Slider {...modalSliderSettings}>
                   {modalItem.images.map((img, i) => (
-                    <div key={i} className="h-[300px] rounded-xl overflow-hidden">
+                    <div key={i} className="h-auto rounded-xl overflow-hidden">
                       <img
                         src={img}
                         alt=""

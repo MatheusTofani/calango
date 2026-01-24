@@ -131,13 +131,13 @@ const ProductsHome = () => {
     >
       <img
         src="/assets/grafite1.png"
-        className="absolute top-[-20px] sm:top-[-35px] md:top-[-40px] lg:top-[-45px] right-10 sm:right-12 md:right-14 lg:right-15 w-50 sm:w-24 md:w-28 lg:w-auto"
+        className="absolute top-[-30px] sm:top-[-35px] md:top-[-40px]  lg:top-[-45px] right-5 sm:right-12 md:right-14 lg:right-15 w-55 sm:w-24 md:w-28 lg:w-auto"
         alt=""
       />
 
       <div className="px-6 sm:px-8 md:px-12 lg:px-[65px] h-full w-full flex flex-col justify-between gap-10 sm:gap-12 md:gap-14 lg:gap-0">
         <div className="flex items-center gap-4 sm:gap-6 md:gap-8 lg:gap-[54px]">
-          <p className="text-[12px] sm:text-[20px] md:text-[22px] lg:text-[24px] w-[400px] sm:w-[210px] md:w-[240px] lg:w-[270px]">
+          <p className="text-[16px] sm:text-[20px] md:text-[22px] lg:text-[24px] w-[400px] sm:w-[210px] md:w-[240px] lg:w-[270px]">
             Nossos produtos
           </p>
           <div className="w-full h-px bg-black"></div>
@@ -150,11 +150,20 @@ const ProductsHome = () => {
               className="cursor-pointer h-[270px] md:h-auto w-[180px] sm:w-[300px] md:w-[330px] lg:w-[370px] flex-shrink-0 sm:flex-shrink relative group mx-2 sm:mx-0"
             >
               <Link href={`/produtos/${item.name.toLowerCase()}`}>
-                <img
-                  className="h-[270px] sm:h-[400px] md:h-[450px] lg:h-[500px] w-full border-[2px] md:border-8 sm:border-9 md:border-10 object-cover border-[#131413] rounded-[25px] sm:rounded-[30px] md:rounded-[35px] lg:rounded-[40px] relative z-[3]"
-                  src={item.images[0].image}
-                  alt=""
-                />
+             <img
+  className="
+    h-[270px] sm:h-[400px] md:h-[450px] lg:h-[500px]
+    w-full
+    border-[4px] md:border-8 sm:border-9 md:border-10
+    object-cover
+    border-[#131413]
+    rounded-[25px] sm:rounded-[30px] md:rounded-[35px] lg:rounded-[40px]
+    relative z-[3]
+  "
+  src={item.images[0].image}
+  alt=""
+/>
+
 
                 <div className="bg-[#131413] h-[90px] sm:h-[120px] md:h-[130px] lg:h-[140px] w-[120px] sm:w-[180px] md:w-[200px] lg:w-[220px] rounded-[25px] sm:rounded-[30px] md:rounded-[35px] lg:rounded-[40px] flex items-end justify-center py-3 sm:py-4 md:py-[15px] lg:py-[17px] text-[#3BCF41] font-bold text-[14px] sm:text-[20px] md:text-[22px] lg:text-[25px] absolute bottom-[-50px] sm:bottom-[-55px] md:bottom-[-60px] lg:bottom-[-65px] z-[2]">
                   {item.name.toUpperCase()}

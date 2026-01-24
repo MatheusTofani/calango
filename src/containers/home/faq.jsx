@@ -38,7 +38,7 @@ const Faq = () => {
   };
 
   return (
-    <div id="faq" className=" px-[20px] md:px-[40px] lg:px-[65px] py-[50px] md:py-[160px] lg:py-40 flex flex-col lg:flex-row justify-between items-center w-full relative gap-20">
+    <div id="faq" className=" px-[20px] md:px-[40px] lg:px-[65px] py-[50px] md:py-[50px] md:py-[160px] lg:py-40 flex flex-col lg:flex-row justify-between items-center w-full relative gap-5   md:gap-20">
       {/* Conteúdo */}
       <div className="w-full lg:w-[60%]">
         <p className="text-[13px] md:text-[25px] lg:text-[28px] w-full lg:w-[900px] mb-12 lg:mb-20 bounded">

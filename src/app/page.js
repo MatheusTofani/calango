@@ -16,21 +16,21 @@ export default function Home() {
         <Header />
         <div className=" pt-10 md:pt-20 bg-[#3BCF41] md:rounded-[70px] rounded-[20px]">
           <Carousel />
-          <div className="relative z-[5] mt-20 sm:mt-28 md:mt-36 w-full px-4 sm:px-0 flex flex-col md:flex-row items-center justify-center gap-4 md:gap-10">
-            <div className="relative z-[5] mt-20  md:mt-15 w-full px-4 flex flex-col md:flex-row items-center justify-center gap-4 md:gap-10">
+          <div className="relative z-[5] mt-10 sm:mt-28 md:mt-16 w-full px-4 sm:px-0 flex flex-col md:flex-row items-center justify-center gap-4 md:gap-10">
+            <div className="static z-[5]  w-full px-4 flex flex-col md:flex-row items-center justify-center gap-4 md:gap-10">
               <a
                 href="https://api.whatsapp.com/send/?phone=5577988740276&text&type=phone_number&app_absent=0"
                 target="_blank"
                 className="
-      w-full sm:w-[320px] md:w-auto
+      w-auto sm:w-[320px] md:w-auto
       text-center
       bg-[#131413]
       text-[#3BCF41]
       rounded-[24px] sm:rounded-[30px] md:rounded-[40px]
       px-6 sm:px-10 md:px-16
-      py-4 sm:py-5
-      text-base sm:text-lg md:text-xl
-      font-bold
+      py-2 sm:py-4
+      text-base sm:text-lg md:text-[22px]
+      font-semibold
       transition
       hover:scale-105
     "
@@ -42,15 +42,15 @@ export default function Home() {
                 href="/catalogo"
                 target="_blank"
                 className="
-      w-full sm:w-[320px] md:w-auto
+      w-auto sm:w-[320px] md:w-auto
       text-center
       bg-[#D9D9D9]
       text-[#131413]
       rounded-[24px] sm:rounded-[30px] md:rounded-[40px]
-      px-6 sm:px-10 md:px-16
-      py-4 sm:py-5
-      text-base sm:text-lg md:text-xl
-      font-bold
+      px-15 sm:px-10 md:px-16
+      py-2 sm:py-4
+      text-base sm:text-lg md:text-[22px]
+      font-medium
       transition
       hover:scale-105
     "
