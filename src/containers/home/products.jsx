@@ -147,12 +147,12 @@ const ProductsHome = () => {
           {items.map((item, index) => (
             <li
               key={index}
-              className="cursor-pointer h-[270px] md:h-auto w-[180px] sm:w-[300px] md:w-[330px] lg:w-[370px] flex-shrink-0 sm:flex-shrink relative group mx-2 sm:mx-0"
+              className="cursor-pointer h-[300px] md:h-auto w-[210px] sm:w-[300px] md:w-[330px] lg:w-[370px] flex-shrink-0 sm:flex-shrink relative group mx-2 sm:mx-0"
             >
               <Link href={`/produtos/${item.name.toLowerCase()}`}>
              <img
   className="
-    h-[270px] sm:h-[400px] md:h-[450px] lg:h-[500px]
+    h-[300px] sm:h-[400px] md:h-[450px] lg:h-[500px]
     w-full
     border-[4px] md:border-8 sm:border-9 md:border-10
     object-cover
@@ -165,15 +165,15 @@ const ProductsHome = () => {
 />
 
 
-                <div className="bg-[#131413] h-[90px] sm:h-[120px] md:h-[130px] lg:h-[140px] w-[120px] sm:w-[180px] md:w-[200px] lg:w-[220px] rounded-[25px] sm:rounded-[30px] md:rounded-[35px] lg:rounded-[40px] flex items-end justify-center py-3 sm:py-4 md:py-[15px] lg:py-[17px] text-[#3BCF41] font-bold text-[14px] sm:text-[20px] md:text-[22px] lg:text-[25px] absolute bottom-[-50px] sm:bottom-[-55px] md:bottom-[-60px] lg:bottom-[-65px] z-[2]">
+                <div className="bg-[#131413] h-[80px] sm:h-[120px] md:h-[130px] lg:h-[140px] w-[140px] sm:w-[180px] md:w-[200px] lg:w-[220px] rounded-[25px] sm:rounded-[30px] md:rounded-[35px] lg:rounded-[40px] flex items-end justify-center py-2 sm:py-4 md:py-[15px] lg:py-[17px] text-[#3BCF41] font-bold text-[16px] sm:text-[20px] md:text-[22px] lg:text-[25px] absolute bottom-[-40px] sm:bottom-[-55px] md:bottom-[-60px] lg:bottom-[-65px] z-[2]">
                   {item.name.toUpperCase()}
                 </div>
 
-                <div className="absolute right-0 h-[50px] sm:h-[50px] md:h-[55px] lg:h-[65px] bottom-[-50px] sm:bottom-[-55px] md:bottom-[-60px] lg:bottom-[-65px] w-[130px] sm:w-[140px] md:w-[150px] lg:w-[170px] text-[#131413] underline flex justify-center items-center text-[14px] sm:text-[15px] md:text-[16px] lg:text-[18px]">
+                <div className="absolute right-0 h-[50px] sm:h-[50px] md:h-[55px] lg:h-[65px] bottom-[-30px] sm:bottom-[-55px] md:bottom-[-60px] lg:bottom-[-65px] w-[140px] sm:w-[140px] md:w-[150px] lg:w-[170px] text-[#131413] underline flex justify-center items-center text-[14px] sm:text-[15px] md:text-[16px] lg:text-[18px]">
                   <span className="hidden md:block absolute z-[3] underline">
                     + Ver mais
                   </span>
-                  <span className=" md:hidden right-3 absolute z-[3] underline">
+                  <span className="bottom-[-0px] md:hidden right-4 absolute z-[3] underline">
                     Ver +
                   </span>
                   <div className="w-[160px] hidden md:block sm:w-[170px] md:w-[180px] lg:w-[210px] h-full bg-[#3BCF41] rounded-[25px] sm:rounded-[30px] md:rounded-[35px] lg:rounded-[40px] absolute z-[1] right-[0px] sm:right-[110px] md:right-[120px] lg:right-[155px] group-hover:right-0 transition-all duration-300"></div>

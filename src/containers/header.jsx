@@ -35,8 +35,8 @@ const Header = () => {
   };
 
   return (
-    <header className="w-full py-5 px-4 md:px-[50px] text-[#3BCF41]">
-      <div className="min-h-[100px] flex items-center justify-between relative">
+    <header className="w-full  md:py-5 px-4 md:px-[50px] text-[#3BCF41]">
+      <div className="md:min-h-[100px] min-h-[80px] flex items-center justify-between relative">
         <button
           className="md:hidden text-2xl z-60"
           onClick={() => setOpen(!open)}
@@ -75,7 +75,7 @@ const Header = () => {
         </nav>
 
         {/* REDES */}
-        <ul className="flex md:gap-[20px] text-[16px] gap-2 md:text-[22px] z-50">
+        <ul className="flex md:gap-[20px] text-[18px] gap-2 md:text-[22px] z-50">
           {redes.map((item, index) => (
             <li
               key={index}

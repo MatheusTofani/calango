@@ -9,7 +9,7 @@ const Desc = () => {
         text-[20px] md:text-[32px]
       "
     >
-      <img src="/assets/grafite2.png" className="absolute md:h-auto h-11 md:h-10 md:top-[-170] left-[10] top-[-140] md:left-[-260] z-[1]" alt="" />  
+      <img src="/assets/grafite2.png" className="absolute md:h-auto h-11 md:h-10 md:top-[-170] left-[10] top-[-150] md:left-[-260] z-[1]" alt="" />  
 
       {/* TEXTO */}
       <p className="bounded mx-auto md:text-[28px] text-[16px]  w-full ">

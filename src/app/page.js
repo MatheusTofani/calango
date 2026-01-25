@@ -14,7 +14,7 @@ export default function Home() {
     <div className="overflow-x-hidden scroll-smooth">
       <Container >
         <Header />
-        <div className=" pt-10 md:pt-20 bg-[#3BCF41] md:rounded-[70px] rounded-[20px]">
+        <div className=" pt-5 md:pt-20 bg-[#3BCF41] md:rounded-[70px] rounded-[20px]">
           <Carousel />
           <div className="relative z-[5] mt-10 sm:mt-28 md:mt-16 w-full px-4 sm:px-0 flex flex-col md:flex-row items-center justify-center gap-4 md:gap-10">
             <div className="static z-[5]  w-full px-4 flex flex-col md:flex-row items-center justify-center gap-4 md:gap-10">
