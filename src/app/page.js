@@ -19,7 +19,7 @@ export default function Home() {
           <div className="relative z-[5] mt-10 sm:mt-28 md:mt-16 w-full px-4 sm:px-0 flex flex-col md:flex-row items-center justify-center gap-4 md:gap-10">
             <div className="static z-[5]  w-full px-4 flex flex-col md:flex-row items-center justify-center gap-4 md:gap-10">
               <a
-                href="https://api.whatsapp.com/send/?phone=5577988740276&text&type=phone_number&app_absent=0"
+                href="https://w.app/umgakc"
                 target="_blank"
                 className="
       w-auto sm:w-[320px] md:w-auto
