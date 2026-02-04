@@ -3,7 +3,7 @@ import { FaWhatsapp } from "react-icons/fa";
 const Whatsapp = () => {
   return (
     <div className="p-4 text-[40px] bg-[#25D366] text-[#FDFBFE] rounded-full  hover:bg-[#01D366] transition-colors duration-300 fixed bottom-6 right-6 shadow-lg cursor-pointer">
-      <a href="https://api.whatsapp.com/send/?phone=5577988740276&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" aria-label="Converse pelo WhatsApp">
+      <a href="https://w.app/umgakc" target="_blank" rel="noopener noreferrer" aria-label="Converse pelo WhatsApp">
       <FaWhatsapp />
       </a>
     </div>

@@ -75,7 +75,7 @@ const ProductDetail = ({ products }) => {
             {/* BOTÃO ORÇAMENTO */}
             <li className="md:mt-12 mt-10">
               <button className="text-[18px] md:text-[24px] font-semibold text-[#131413] bg-[#3BCF41] rounded-[30px] md:rounded-[40px] p-3 w-full">
-               <a href="https://api.whatsapp.com/send/?phone=5577988740276&text&type=phone_number&app_absent=0">
+               <a href="https://w.app/umgakc">
                 Faça seu orçamento!
                 </a>
               </button>
