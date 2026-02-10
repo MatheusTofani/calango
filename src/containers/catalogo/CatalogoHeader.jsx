@@ -128,7 +128,7 @@ export default function CatalogoSection() {
             >
               {cat.icon}
             </div>
-            <span className="text-sm">{cat.nome}</span>
+            <span className="text-sm text-[#131413]">{cat.nome}</span>
           </li>
         ))}
       </ul>
