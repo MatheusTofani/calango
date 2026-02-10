@@ -62,32 +62,22 @@ export default function CatalogoSection() {
     async function load() {
       const { data, error } = await supabase
         .from("catalog")
-        .select("id, name, category");
+        .select("id, name, category, images");
 
       if (error) {
         console.error(error.message);
+        setLoading(false);
         return;
       }
 
-      const mapped = data.map((item) => {
-        const images = [1, 2, 3].map((i) => {
-          const { data } = supabase.storage
-            .from("catalog-images")
-            .getPublicUrl(`${item.id}/${i}.jpg`);
-
-          return `${data.publicUrl}?r=${Date.now()}`;
-        });
-
-        return { ...item, images };
-      });
-
-      setProdutos(mapped);
+      setProdutos(data || []);
       setLoading(false);
     }
 
     load();
   }, []);
 
+  /* TRACK MODAL */
   useEffect(() => {
     if (!modalItem) return;
 
@@ -138,7 +128,7 @@ export default function CatalogoSection() {
             >
               {cat.icon}
             </div>
-            <span className="text-sm text-[#131413]">{cat.nome}</span>
+            <span className="text-sm">{cat.nome}</span>
           </li>
         ))}
       </ul>
@@ -148,7 +138,7 @@ export default function CatalogoSection() {
         {loading ? (
           <PageLoader />
         ) : filtrados.length === 0 ? (
-          <div className="w-full h-full flex items-center justify-center">
+          <div className="w-full flex justify-center">
             Nenhum produto encontrado.
           </div>
         ) : (
@@ -158,7 +148,7 @@ export default function CatalogoSection() {
               className="group rounded-xl overflow-hidden cursor-pointer px-2"
             >
               <Slider {...cardSliderSettings}>
-                {item.images.map((img, i) => (
+                {item.images?.map((img, i) => (
                   <div key={i} className="relative">
                     <img
                       src={img}
@@ -188,7 +178,7 @@ export default function CatalogoSection() {
       {/* MODAL */}
       {modalItem && (
         <div
-          className="fixed inset-0 bg-[#000000cc] flex items-center justify-center z-50 px-4"
+          className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 px-4"
           onClick={() => setModalItem(null)}
         >
           <div
@@ -197,7 +187,7 @@ export default function CatalogoSection() {
           >
             <button
               onClick={() => setModalItem(null)}
-              className="absolute top-4 right-4 bg-[#131413] text-[#3BCF41] w-8 h-8 rounded-full flex items-center justify-center"
+              className="absolute top-4 right-4 bg-[#131413] text-[#3BCF41] w-8 h-8 rounded-full"
             >
               ✕
             </button>
@@ -205,12 +195,12 @@ export default function CatalogoSection() {
             <div className="p-4 md:p-6 flex flex-col lg:flex-row gap-6">
               <div className="w-full lg:w-[520px]">
                 <Slider {...modalSliderSettings}>
-                  {modalItem.images.map((img, i) => (
-                    <div key={i} className="h-auto rounded-xl overflow-hidden">
+                  {modalItem.images?.map((img, i) => (
+                    <div key={i}>
                       <img
                         src={img}
                         alt=""
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover rounded-xl"
                       />
                     </div>
                   ))}
