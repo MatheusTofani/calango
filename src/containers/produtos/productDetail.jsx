@@ -75,7 +75,7 @@ const ProductDetail = ({ products }) => {
             {/* BOTÃO ORÇAMENTO */}
             <li className="md:mt-12 mt-10">
               <button className="text-[18px] md:text-[24px] font-semibold text-[#131413] bg-[#3BCF41] rounded-[30px] md:rounded-[40px] p-3 w-full">
-               <a href="https://w.app/umgakc">
+               <a href="https://wa.me/5577988740276?text=Ol%C3%A1%2C%20vim%20do%20catalogo%2C%20gostaria%20de%20fazer%20um%20or%C3%A7amento">
                 Faça seu orçamento!
                 </a>
               </button>
