@@ -8,7 +8,7 @@ export default function AddCatalogo() {
   const [modalIndex, setModalIndex] = useState(null);
   const [isSaving, setIsSaving] = useState(false);
 
-  const MAX_ITEMS = 200;
+  const MAX_ITEMS = 250;
   const MAX_IMAGES = 3;
 
   const CATEGORY_OPTIONS = [
