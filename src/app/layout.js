@@ -36,14 +36,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="pt-BR">
-  <head>
-  {/* TikTok Pixel */}
-  <Script
-    id="tiktok-pixel"
-    strategy="afterInteractive"
-    dangerouslySetInnerHTML={{
-      __html: `
-(function(w,d,t){
+      <head>
+        {/* TikTok Pixel */}
+        <Script
+          id="tiktok-pixel"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+!function (w, d, t) {
   w.TiktokAnalyticsObject=t;
   var ttq=w[t]=w[t]||[];
   ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"];
@@ -53,49 +53,59 @@ export default function RootLayout({ children }) {
     }
   };
   for(var i=0;i<ttq.methods.length;i++){
-    ttq.setAndDefer(ttq,ttq.methods[i])
+    ttq.setAndDefer(ttq,ttq.methods[i]);
   }
-  ttq.load=function(e){
-    var i="https://analytics.tiktok.com/i18n/pixel/events.js";
-    var n=d.createElement("script");
-    n.type="text/javascript";
-    n.async=true;
-    n.src=i+"?sdkid="+e+"&lib="+t;
-    var a=d.getElementsByTagName("script")[0];
-    a.parentNode.insertBefore(n,a)
+  ttq.instance=function(t){
+    for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++){
+      ttq.setAndDefer(e,ttq.methods[n]);
+    }
+    return e;
   };
-  ttq.load("D5KKCRJC77U2LQ3ISQVG");
+  ttq.load=function(e,n){
+    var r="https://analytics.tiktok.com/i18n/pixel/events.js",
+    o=n&&n.partner;
+    ttq._i=ttq._i||{};
+    ttq._i[e]=[];
+    ttq._i[e]._u=r;
+    ttq._t=ttq._t||{};
+    ttq._t[e]=+new Date;
+    ttq._o=ttq._o||{};
+    ttq._o[e]=n||{};
+    n=document.createElement("script");
+    n.type="text/javascript";
+    n.async=!0;
+    n.src=r+"?sdkid="+e+"&lib="+t;
+    e=document.getElementsByTagName("script")[0];
+    e.parentNode.insertBefore(n,e);
+  };
+
+  ttq.load('D7A1VBRC77U8CCU0FT40');
   ttq.page();
-})(window,document,"ttq");
-      `,
-    }}
-  />
+}(window, document, 'ttq');
+    `,
+          }}
+        />
 
 
-  <Script
-    src="https://www.googletagmanager.com/gtag/js?id=AW-17841033450"
-    strategy="afterInteractive"
-  />
-
-  <Script
-    id="google-gtag"
-    strategy="afterInteractive"
-    dangerouslySetInnerHTML={{
-      __html: `
+        <Script
+          id="google-gtag"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'AW-17841033450');
       `,
-    }}
-  />
+          }}
+        />
 
-  {/* Meta Pixel */}
-<Script
-  id="meta-pixel"
-  strategy="afterInteractive"
-  dangerouslySetInnerHTML={{
-    __html: `
+        {/* Meta Pixel */}
+        <Script
+          id="meta-pixel"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -108,10 +118,10 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 fbq('init', '1912612532620407');
 fbq('track', 'PageView');
     `,
-  }}
-/>
+          }}
+        />
 
-</head>
+      </head>
 
 
       <body
